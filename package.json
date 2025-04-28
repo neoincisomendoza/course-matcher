@@ -1,0 +1,34 @@
+{
+  "name": "course-matcher",
+  "version": "1.0.0",
+  "description": "Automation of Student-Course Allocation for Philippine Science High School System",
+  "main": "./src/index.js",
+  "scripts": {
+    "migrate:create": "NODE_ENV=development knex --knexfile ./src/db/knexfile.js migrate:make migration",
+    "migrate:run": "NODE_ENV=development knex --knexfile ./src/db/knexfile.js migrate:latest",
+    "migrate:revert": "NODE_ENV=development knex --knexfile ./src/db/knexfile.js migrate:rollback"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neoincisomendoza/course-matcher.git"
+  },
+  "author": "Neomi Inciso Mendoza (neomimendoza@oulook.com)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/neoincisomendoza/course-matcher/issues"
+  },
+  "homepage": "https://github.com/neoincisomendoza/course-matcher#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "knex": "^3.1.0",
+    "objection": "^3.1.5",
+    "pg": "^8.15.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3"
+  }
+}
